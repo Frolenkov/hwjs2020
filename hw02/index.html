@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Frolenkov</title>
+
+        <style type="text/css">
+            form {
+                display: flex;
+                flex-direction: column;
+                padding: 50px;
+                width: 300px;
+                border: 1px solid black;
+                border-radius: 10px;;
+            }
+
+            label {
+                margin: 15px 0;
+            }
+
+            button {
+                margin: 15px 0;
+            }
+        </style>
+ 
+    </head>
+    <body>
+        <div>
+            <form>
+                <label>
+                    Pадиус окружности вращения образующей окружности тора
+                    <input id="radiusBig" type="text">
+                </label>
+                
+                <label>
+                    Pадиус образующей окружности тораа
+                    <input id="radiusSmall" type="text">
+                </label>
+                <button type="button" id="volume">Объем</button>               
+               <button type="button" id="area">Площадь</button>
+            </form>
+
+            <form action="">
+                <label for="">login
+                    <input id="login" type="text">
+                </label>
+                <label for="">password
+                    <input id="password" type="text">
+                </label>
+                <button type="button" id="enterMatrix">Come in, please</button>
+            </form>
+        </div>
+        
+        <script>
+            const radiusBig = document.querySelector("#radiusBig")            
+            const radiusSmall = document.querySelector("#radiusSmall")
+            volume.addEventListener("click", setVolume)
+            area.addEventListener("click", setArea)
+           
+              //радиус образующей окружности тора;
+            var R2  //внешний радиус тора;
+            var R1 //внутренний радиус тора;
+            var Dbig  //диаметр окружности вращения образующей окружности тора;
+            var Dsm  //диаметр образующей окружности тора;
+            var D2  //внешний диаметр тора;
+            var D1  //внутренний диаметр тора;
+
+            var Sтор  //площадь тора;
+            var Vтор  //объём тора.
+
+           function setVolume (e) {
+                var rBig = radiusBig.value  // радиус окружности вращения образующей окружности тора;
+                var rSm = radiusSmall.value
+               alert(Vtop = 4 * rBig *(Math.PI**2) * (radiusSmall.value))
+           }
+
+           function setArea (e) {
+                var rBig = radiusBig.value  // радиус окружности вращения образующей окружности тора;
+                var rSm = radiusSmall.value
+               alert(Stop = 4 * rSm * (Math.PI**2) * (radiusSmall.value))
+           }
+
+
+
+           var credentials = {
+            login: 'admin',
+            password: 'qwerty',
+            };
+
+
+            const login = document.querySelector("#login")            
+            const password = document.querySelector("#password")
+            enterMatrix.addEventListener("click", checkIn)
+            
+            function checkIn (e) {                
+                    (login.value == credentials.login) ? 
+                        (password.value == credentials.password) ? alert("Welcome Neo") : alert("Incorect password")
+                        : alert("Incorect login");                        
+            }            
+        </script>
+    </body>
+</html>
